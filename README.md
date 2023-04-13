@@ -30,12 +30,35 @@ Aspect Oriented Programming的缩写，意为：面向切面编程。
 
 静态代理是指在编译时就已经确定了代理类和目标类的关系
 
+流行类库：
+
+- [PostSharp](https://www.postsharp.net/)（收费）
+- Fody
+
 ### 动态代理
 
 动态代理是指在运行时动态生成代理类的字节码，并加载到内存中
 
+流行类库：
+- DynamicProxy
 
-你好，这是Bing。根据网络搜索结果，.net实现AOP有以下几种方案：
+
+
+## 实现
+
+### 静态代理-DIY
+
+[说明](DiyStaticProxy/README.md)
+
+### 动态代理-DIY
+
+[说明](DiyDynamicProxy/README.md)
+
+## Refers
+
+https://www.cnblogs.com/wswind/p/aop_in_dotnet.html
+
+根据网络搜索结果，.net实现AOP有以下几种方案：
 
 - 使用Remoting Proxies，但是只能用于interface或MarshalByRefObjects¹
 - 使用ContextBoundObject，但是性能非常低¹
