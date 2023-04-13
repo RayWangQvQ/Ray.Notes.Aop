@@ -54,6 +54,18 @@ Aspect Oriented Programming的缩写，意为：面向切面编程。
 
 [说明](DiyDynamicProxy/README.md)
 
+### 静态代理-FOdy
+
+todo
+
+### 动态代理-Castle DynamicProxy
+
+todo
+
+### 动态代理-Autofac + Castle.DynamicProxy
+
+todo
+
 ## Refers
 
 https://www.cnblogs.com/wswind/p/aop_in_dotnet.html
