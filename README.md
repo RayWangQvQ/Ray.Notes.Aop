@@ -74,13 +74,13 @@ Aspect Oriented Programming的缩写，意为：面向切面编程。
 
 [说明](DiyDynamicProxy/README.md)
 
-### 4.3. 静态代理-FOdy
+### 4.3. 静态代理-Fody
 
 todo
 
 ### 4.4. 动态代理-Castle DynamicProxy
 
-todo
+[说明](CastleCoreSample/README.md)
 
 ### 4.5. 动态代理-Autofac + Castle.DynamicProxy
 
