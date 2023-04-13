@@ -1,6 +1,26 @@
-# Ray.Notes.Aop
+# 1. Ray.Notes.Aop
 
-## What is AOP
+<!-- TOC depthFrom:2 -->
+
+- [1. What is AOP](#1-what-is-aop)
+- [2. 一些名词](#2-一些名词)
+    - [2.1. 目标对象（Target）](#21-目标对象target)
+    - [2.2. 切面（Aspect）](#22-切面aspect)
+    - [2.3. 织入（Weaving）](#23-织入weaving)
+- [3. 实现AOP的几种原理](#3-实现aop的几种原理)
+    - [3.1. 静态代理](#31-静态代理)
+    - [3.2. 动态代理](#32-动态代理)
+- [4. 实现](#4-实现)
+    - [4.1. 静态代理-DIY](#41-静态代理-diy)
+    - [4.2. 动态代理-DIY](#42-动态代理-diy)
+    - [4.3. 静态代理-FOdy](#43-静态代理-fody)
+    - [4.4. 动态代理-Castle DynamicProxy](#44-动态代理-castle-dynamicproxy)
+    - [4.5. 动态代理-Autofac + Castle.DynamicProxy](#45-动态代理-autofac--castledynamicproxy)
+- [5. Refers](#5-refers)
+
+<!-- /TOC -->
+
+## 1. What is AOP
 
 Aspect Oriented Programming的缩写，意为：面向切面编程。
 
@@ -9,24 +29,24 @@ Aspect Oriented Programming的缩写，意为：面向切面编程。
 - 主要分为静态代理和动态代理
 - AOP可以将日志记录，性能统计，安全控制，事务处理，异常处理等代码从业务逻辑代码中划分出来，通过对这些行为的分离，我们希望可以将它们独立到非指导业务逻辑的方法中，进而改变这些行为的时候不影响业务逻辑的代码
 
-## 一些名词
+## 2. 一些名词
 
-### 目标对象（Target）
+### 2.1. 目标对象（Target）
 
 代理的目标对象。（被代理的对象）
 
-### 切面（Aspect）
+### 2.2. 切面（Aspect）
 
 抽象出的逻辑
 
-### 织入（Weaving）
+### 2.3. 织入（Weaving）
   织入是把切面应用到目标对象并创建新的代理对象的过程。切面会在指定的连接点被织入到目标对象中。
 
-## 实现AOP的几种原理
+## 3. 实现AOP的几种原理
 
 2种：静态代理（编译时）和动态代理（运行时）
 
-### 静态代理
+### 3.1. 静态代理
 
 静态代理是指在编译时就已经确定了代理类和目标类的关系
 
@@ -35,7 +55,7 @@ Aspect Oriented Programming的缩写，意为：面向切面编程。
 - [PostSharp](https://www.postsharp.net/)（收费）
 - Fody
 
-### 动态代理
+### 3.2. 动态代理
 
 动态代理是指在运行时动态生成代理类的字节码，并加载到内存中
 
@@ -44,29 +64,29 @@ Aspect Oriented Programming的缩写，意为：面向切面编程。
 
 
 
-## 实现
+## 4. 实现
 
-### 静态代理-DIY
+### 4.1. 静态代理-DIY
 
 [说明](DiyStaticProxy/README.md)
 
-### 动态代理-DIY
+### 4.2. 动态代理-DIY
 
 [说明](DiyDynamicProxy/README.md)
 
-### 静态代理-FOdy
+### 4.3. 静态代理-FOdy
 
 todo
 
-### 动态代理-Castle DynamicProxy
+### 4.4. 动态代理-Castle DynamicProxy
 
 todo
 
-### 动态代理-Autofac + Castle.DynamicProxy
+### 4.5. 动态代理-Autofac + Castle.DynamicProxy
 
 todo
 
-## Refers
+## 5. Refers
 
 https://www.cnblogs.com/wswind/p/aop_in_dotnet.html
 
