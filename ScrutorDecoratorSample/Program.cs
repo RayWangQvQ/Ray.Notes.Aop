@@ -15,7 +15,7 @@ namespace ScrutorDecoratorSample
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            builder.Services.AddSingleton<ISpeakService, SpeakService>();
+            builder.Services.AddScoped<ISpeakService, SpeakService>();
             builder.Services.Decorate<ISpeakService, MyDecorator>();
 
             var app = builder.Build();

@@ -1,7 +1,8 @@
 ﻿using Castle.DynamicProxy;
+using CastleCoreSample;
 using Shares;
 
-namespace CastleCoreSample
+namespace CastleDynamicProxySample
 {
     internal class Program
     {
@@ -9,8 +10,8 @@ namespace CastleCoreSample
         {
             var proxyGenerator = new ProxyGenerator();
 
-            SingService singService = proxyGenerator.CreateClassProxy<SingService>(new MyInterceptor());
-            singService.Sing();
+            RapService rapService = proxyGenerator.CreateClassProxy<RapService>(new MyInterceptor());
+            rapService.Rap();
 
             Console.WriteLine(new string('-', 20));
 
@@ -24,11 +25,11 @@ namespace CastleCoreSample
         }
     }
 
-    public class SingService
+    public class RapService
     {
-        public virtual void Sing()
+        public virtual void Rap()
         {
-            Console.WriteLine("LaLaLa");
+            Console.WriteLine("YoYoYo");
         }
     }
 }

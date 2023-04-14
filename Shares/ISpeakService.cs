@@ -1,6 +1,6 @@
 ﻿namespace Shares
 {
-    public interface ISpeakService
+    public interface ISpeakService: IAppService
     {
         void Say();
     }
