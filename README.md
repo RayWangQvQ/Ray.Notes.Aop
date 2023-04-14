@@ -78,13 +78,13 @@ Aspect Oriented Programming的缩写，意为：面向切面编程。
 
 todo
 
-### 4.4. 动态代理-Castle DynamicProxy
+### 4.4. 动态代理-Castle.DynamicProxy
 
-[说明](CastleCoreSample/README.md)
+[说明](CastleDynamicProxySample/README.md)
 
 ### 4.5. 动态代理-Autofac + Castle.DynamicProxy
 
-todo
+[说明](AutofacCastleDynamicProxySample/README.md)
 
 ## 5. Refers
 
