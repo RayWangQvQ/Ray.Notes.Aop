@@ -21,19 +21,23 @@ namespace ScrutorDecoratorScanSample
                 .FromAssemblyOf<IAppService>()
                 .AddClasses(classes => classes.AssignableTo<IAppService>())
                 .AsImplementedInterfaces()
+                .AsSelf()
                 .WithTransientLifetime());
 
             builder.Services.AddSingleton<ProxyGenerator>();
             builder.Services.AddTransient<MyInterceptor>();
 
-            List<ServiceDescriptor> serviceDescriptorList = builder.Services.Where(r => r.ServiceType.IsAssignableTo(typeof(IAppService))).ToList();
+            List<ServiceDescriptor> serviceDescriptorList = builder.Services
+                .Where(r => r.ServiceType.IsAssignableTo(typeof(IAppService)) && r.ServiceType.IsInterface)
+                .ToList();
             foreach (var registration in serviceDescriptorList)
             {
                 builder.Services.AddScoped(registration.ServiceType, sp =>
                 {
                     var generator = sp.GetRequiredService<ProxyGenerator>();
                     var interceptor = sp.GetRequiredService<MyInterceptor>();
-                    var target = sp.GetRequiredService(registration.ServiceType);//todo
+
+                    var target = sp.GetRequiredService(registration.ImplementationType);//todo
 
                     return generator.CreateInterfaceProxyWithTargetInterface(
                             registration.ServiceType,

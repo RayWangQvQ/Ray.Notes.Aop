@@ -15,13 +15,14 @@ namespace CastleDynamicProxySample
 
             Console.WriteLine(new string('-', 20));
 
-            ISpeakService speakService = proxyGenerator.CreateInterfaceProxyWithTarget<ISpeakService>(new SpeakService(), new MyInterceptor());
+            ISpeakService speakService = proxyGenerator.CreateInterfaceProxyWithTargetInterface<ISpeakService>(new SpeakService(), new MyInterceptor());
             speakService.Say();
 
             Console.WriteLine(new string('-', 20));
 
-            speakService = proxyGenerator.CreateInterfaceProxyWithTargetInterface<ISpeakService>(new SpeakService(), new MyInterceptor());
+            speakService = proxyGenerator.CreateInterfaceProxyWithTarget<ISpeakService>(new SpeakService(), new MyInterceptor());
             speakService.Say();
+
         }
     }
 
