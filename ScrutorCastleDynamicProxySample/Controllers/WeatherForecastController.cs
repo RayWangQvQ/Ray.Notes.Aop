@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace ScrutorDecoratorScanSample.Controllers
+namespace ScrutorCastleDynamicProxySample.Controllers
 {
     [ApiController]
     [Route("[controller]")]

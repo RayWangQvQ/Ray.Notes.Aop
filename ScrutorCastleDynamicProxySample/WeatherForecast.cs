@@ -1,4 +1,4 @@
-namespace ScrutorDecoratorScanSample
+namespace ScrutorCastleDynamicProxySample
 {
     public class WeatherForecast
     {

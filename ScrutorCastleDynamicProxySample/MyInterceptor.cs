@@ -1,6 +1,6 @@
 ﻿using Castle.DynamicProxy;
 
-namespace ScrutorDecoratorScanSample
+namespace ScrutorCastleDynamicProxySample
 {
     public class MyInterceptor : IInterceptor
     {

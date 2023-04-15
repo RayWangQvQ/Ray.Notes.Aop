@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Shares;
 
-namespace ScrutorDecoratorSample.Controllers
+namespace ScrutorCastleDynamicProxySample.Controllers
 {
     [ApiController]
     [Route("[controller]")]

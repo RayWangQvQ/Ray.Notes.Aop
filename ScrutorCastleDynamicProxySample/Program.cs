@@ -1,8 +1,7 @@
 using Castle.DynamicProxy;
-using Microsoft.Extensions.DependencyInjection;
 using Shares;
 
-namespace ScrutorDecoratorScanSample
+namespace ScrutorCastleDynamicProxySample
 {
     public class Program
     {
