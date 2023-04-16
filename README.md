@@ -13,9 +13,13 @@
 - [4. 实现](#4-实现)
     - [4.1. 静态代理-DIY](#41-静态代理-diy)
     - [4.2. 动态代理-DIY](#42-动态代理-diy)
-    - [4.3. 静态代理-FOdy](#43-静态代理-fody)
-    - [4.4. 动态代理-Castle DynamicProxy](#44-动态代理-castle-dynamicproxy)
-    - [4.5. 动态代理-Autofac + Castle.DynamicProxy](#45-动态代理-autofac--castledynamicproxy)
+    - [4.3. 静态代理-Fody](#43-静态代理-fody)
+    - [4.4. Scrutor Decorate](#44-scrutor-decorate)
+    - [4.5. 动态代理-Castle.DynamicProxy](#45-动态代理-castledynamicproxy)
+        - [4.5.1. Castle.DynamicProxy](#451-castledynamicproxy)
+        - [4.5.2. Ms DI + Castle.DynamicProxy](#452-ms-di--castledynamicproxy)
+        - [4.5.3. Ms DI + Scrutor + Castle.DynamicProxy](#453-ms-di--scrutor--castledynamicproxy)
+        - [4.5.4. Autofac + Castle.DynamicProxy](#454-autofac--castledynamicproxy)
 - [5. Refers](#5-refers)
 
 <!-- /TOC -->
@@ -74,15 +78,31 @@ Aspect Oriented Programming的缩写，意为：面向切面编程。
 
 [说明](DiyDynamicProxy/README.md)
 
+### 4.4. 静态代理-Scrutor Decorate
+
+[说明](ScrutorDecoratorSample/README.md)
+
+
 ### 4.3. 静态代理-Fody
 
 todo
 
-### 4.4. 动态代理-Castle.DynamicProxy
+
+### 4.5. 动态代理-Castle.DynamicProxy
+
+#### 4.5.1. Castle.DynamicProxy
 
 [说明](CastleDynamicProxySample/README.md)
 
-### 4.5. 动态代理-Autofac + Castle.DynamicProxy
+#### 4.5.2. Ms DI + Castle.DynamicProxy
+
+[说明](MsDiCastleDynamicProxySample/README.md)
+
+#### 4.5.3. Ms DI + Scrutor + Castle.DynamicProxy
+
+[说明](ScrutorCastleDynamicProxyScanSample/README.md)
+
+#### 4.5.4. Autofac + Castle.DynamicProxy
 
 [说明](AutofacCastleDynamicProxySample/README.md)
 

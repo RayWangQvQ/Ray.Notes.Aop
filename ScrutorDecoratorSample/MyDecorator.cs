@@ -5,10 +5,12 @@ namespace ScrutorDecoratorSample
     public class MyDecorator: ISpeakService
     {
         private readonly ISpeakService _target;
+        private readonly ILogger<MyDecorator> _logger;
 
-        public MyDecorator(ISpeakService target)
+        public MyDecorator(ISpeakService target, ILogger<MyDecorator> logger)
         {
             _target = target;
+            _logger = logger;
         }
 
         public void Say()
