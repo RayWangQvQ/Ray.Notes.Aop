@@ -106,6 +106,8 @@ Scrutor集成的装饰者模式。
 
 ### 4.4. 静态代理-Fody
 
+https://github.com/inversionhourglass/Rougamo
+
 todo
 
 
@@ -140,6 +142,10 @@ todo
 https://www.cnblogs.com/wswind/p/aop_in_dotnet.html
 
 https://github.com/dotnet/runtime/issues/36021
+
+https://zhuanlan.zhihu.com/p/557599565
+
+https://www.cnblogs.com/chenug/p/9848852.html
 
 根据网络搜索结果，.net实现AOP有以下几种方案：
 
