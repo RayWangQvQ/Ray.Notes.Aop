@@ -90,6 +90,8 @@ todo
 
 https://www.cnblogs.com/wswind/p/aop_in_dotnet.html
 
+https://github.com/dotnet/runtime/issues/36021
+
 根据网络搜索结果，.net实现AOP有以下几种方案：
 
 - 使用Remoting Proxies，但是只能用于interface或MarshalByRefObjects¹

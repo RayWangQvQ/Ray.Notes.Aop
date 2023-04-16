@@ -20,7 +20,7 @@ namespace ScrutorCastleDynamicProxySample
                 .FromAssemblyOf<IAppService>()
                 .AddClasses(classes => classes.AssignableTo<IAppService>())
                 .AsImplementedInterfaces()
-                .AsSelf()
+                .AsSelf() //因为动态代理时要拿实例，所以要注一个自身的服务
                 .WithTransientLifetime());
 
             builder.Services.AddSingleton<ProxyGenerator>();
@@ -36,7 +36,7 @@ namespace ScrutorCastleDynamicProxySample
                     var generator = sp.GetRequiredService<ProxyGenerator>();
                     var interceptor = sp.GetRequiredService<MyInterceptor>();
 
-                    var target = sp.GetRequiredService(registration.ImplementationType);//todo
+                    var target = sp.GetRequiredService(registration.ImplementationType!);//todo
 
                     return generator.CreateInterfaceProxyWithTargetInterface(
                             registration.ServiceType,
