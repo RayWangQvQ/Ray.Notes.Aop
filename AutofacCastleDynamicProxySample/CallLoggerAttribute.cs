@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace AutofacCastleDynamicProxySample
 {
-    public class RapService:IRapService
+    [AttributeUsage(AttributeTargets.Method)]
+    public class CallLoggerAttribute : Attribute
     {
-        public void Rap()
-        {
-            Console.WriteLine("YoYoYo");
-        }
+
     }
 }

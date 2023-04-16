@@ -1,16 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Shares
 {
-    public class SingService : ISingService
+    public class PrintHelper
     {
-        public void Sing()
+        public static void Print(string str)
         {
-            PrintHelper.Print("LaLaLa");
+            Console.WriteLine(str);
+            Debug.WriteLine(str);
         }
     }
 }

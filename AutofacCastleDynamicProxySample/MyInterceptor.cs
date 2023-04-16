@@ -1,9 +1,5 @@
 ﻿using Castle.DynamicProxy;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Shares;
 
 namespace AutofacCastleDynamicProxySample
 {
@@ -11,9 +7,9 @@ namespace AutofacCastleDynamicProxySample
     {
         public void Intercept(IInvocation invocation)
         {
-            Console.WriteLine("咳咳咳");
+            PrintHelper.Print("咳咳咳");
             invocation.Proceed();
-            Console.WriteLine("谢谢");
+            PrintHelper.Print("谢谢");
         }
     }
 }

@@ -10,7 +10,7 @@ namespace Shares
     {
         public void Say()
         {
-            Console.WriteLine("Hello World!");
+            PrintHelper.Print("Hello World!");
         }
     }
 }
