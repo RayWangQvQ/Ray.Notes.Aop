@@ -10,13 +10,14 @@
 - [3. 实现AOP的几种原理](#3-实现aop的几种原理)
     - [3.1. 静态代理](#31-静态代理)
     - [3.2. 动态代理](#32-动态代理)
+    - [3.3. 区分](#33-区分)
 - [4. 实现](#4-实现)
-    - [4.1. 静态代理-DIY](#41-静态代理-diy)
-    - [4.2. 动态代理-DIY](#42-动态代理-diy)
-    - [4.3. 静态代理-Fody](#43-静态代理-fody)
-    - [4.4. Scrutor Decorate](#44-scrutor-decorate)
+    - [4.1. DIY静态代理](#41-diy静态代理)
+    - [4.2. DIY动态代理](#42-diy动态代理)
+    - [4.3. 静态代理-Scrutor Decorate](#43-静态代理-scrutor-decorate)
+    - [4.4. 静态代理-Fody](#44-静态代理-fody)
     - [4.5. 动态代理-Castle.DynamicProxy](#45-动态代理-castledynamicproxy)
-        - [4.5.1. Castle.DynamicProxy](#451-castledynamicproxy)
+        - [4.5.1. Castle.DynamicProxy本体](#451-castledynamicproxy本体)
         - [4.5.2. Ms DI + Castle.DynamicProxy](#452-ms-di--castledynamicproxy)
         - [4.5.3. Ms DI + Scrutor + Castle.DynamicProxy](#453-ms-di--scrutor--castledynamicproxy)
         - [4.5.4. Autofac + Castle.DynamicProxy](#454-autofac--castledynamicproxy)
@@ -44,11 +45,14 @@ Aspect Oriented Programming的缩写，意为：面向切面编程。
 抽象出的逻辑
 
 ### 2.3. 织入（Weaving）
-  织入是把切面应用到目标对象并创建新的代理对象的过程。切面会在指定的连接点被织入到目标对象中。
+
+把切面应用到目标对象并创建新的代理对象的过程。
+
+AOP即是把切面在指定的连接点织入到目标对象中。
 
 ## 3. 实现AOP的几种原理
 
-2种：静态代理（编译时）和动态代理（运行时）
+总体分2种：静态代理（编译时）和动态代理（运行时）。
 
 ### 3.1. 静态代理
 
@@ -58,51 +62,76 @@ Aspect Oriented Programming的缩写，意为：面向切面编程。
 
 - [PostSharp](https://www.postsharp.net/)（收费）
 - Fody
+- [Scrutor](https://github.com/khellang/Scrutor#decoration)
 
 ### 3.2. 动态代理
 
 动态代理是指在运行时动态生成代理类的字节码，并加载到内存中
 
 流行类库：
-- DynamicProxy
+- [Castle.DynamicProxy](https://github.com/castleproject/Core)
 
+### 3.3. 区分
 
+区分很简单，就咬准一个问题：代理类本身是什么时候生成的？
+
+如果是编译时，根据代码里一些指定的规则（比如Attribute），将代理类生成并织入到了IL里，那它即为静态代理。
+
+如果编译时没改IL，而是当程序运行时，基于反射等方式，动态的生成了一个代码和IL里都不存在的代理类（对象），那则为动态代理。
+
+下面4.1和4.2会分别手写一个静态代理和一个动态代理，看完就懂了。
 
 ## 4. 实现
 
-### 4.1. 静态代理-DIY
+### 4.1. DIY静态代理
+
+手写一个代理模式
 
 [说明](DiyStaticProxy/README.md)
 
-### 4.2. 动态代理-DIY
+P.S.代理模式和装饰者模式的区别，在DI场景下，很难区分和定义，不必太过纠结。
+
+### 4.2. DIY动态代理
+
+基于反射，手写一个动态代理。
 
 [说明](DiyDynamicProxy/README.md)
 
-### 4.4. 静态代理-Scrutor Decorate
+### 4.3. 静态代理-Scrutor Decorate
+
+Scrutor集成的装饰者模式。
 
 [说明](ScrutorDecoratorSample/README.md)
 
 
-### 4.3. 静态代理-Fody
+### 4.4. 静态代理-Fody
 
 todo
 
 
 ### 4.5. 动态代理-Castle.DynamicProxy
 
-#### 4.5.1. Castle.DynamicProxy
+#### 4.5.1. Castle.DynamicProxy本体
+
+原始用法。
 
 [说明](CastleDynamicProxySample/README.md)
 
 #### 4.5.2. Ms DI + Castle.DynamicProxy
 
+集成到Ms DI中。
+
 [说明](MsDiCastleDynamicProxySample/README.md)
 
 #### 4.5.3. Ms DI + Scrutor + Castle.DynamicProxy
 
+利用Scrutor的Scan功能，实现批量注册。
+
 [说明](ScrutorCastleDynamicProxyScanSample/README.md)
 
 #### 4.5.4. Autofac + Castle.DynamicProxy
+
+利用Autofac，实现批量注册。
 
 [说明](AutofacCastleDynamicProxySample/README.md)
 
