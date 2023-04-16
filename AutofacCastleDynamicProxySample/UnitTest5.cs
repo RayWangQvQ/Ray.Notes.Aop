@@ -58,6 +58,12 @@ public class UnitTest5
         }
     }
 
+    [AttributeUsage(AttributeTargets.Method)]
+    public class CallLoggerAttribute : Attribute
+    {
+
+    }
+
     public class CallLoggerMethodInterceptor : IInterceptor
     {
         public void Intercept(IInvocation invocation)
