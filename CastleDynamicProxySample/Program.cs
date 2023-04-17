@@ -30,6 +30,11 @@ namespace CastleDynamicProxySample
             //异步，会出问题
             ISingService singService = proxyGenerator.CreateInterfaceProxyWithTargetInterface<ISingService>(new SingService(), new MyInterceptor());
             await singService.Sing();
+
+            Console.WriteLine(new string('-', 20));
+
+            singService = proxyGenerator.CreateInterfaceProxyWithTargetInterface<ISingService>(new SingService(), new MyAsyncInterceptor());
+            await singService.Sing();
         }
     }
 
