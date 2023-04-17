@@ -21,7 +21,11 @@
         - [4.5.2. Ms DI + Castle.DynamicProxy](#452-ms-di--castledynamicproxy)
         - [4.5.3. Ms DI + Scrutor + Castle.DynamicProxy](#453-ms-di--scrutor--castledynamicproxy)
         - [4.5.4. Autofac + Castle.DynamicProxy](#454-autofac--castledynamicproxy)
-- [5. Refers](#5-refers)
+- [5. 完整项目示例](#5-完整项目示例)
+    - [5.1. ScrutorCastleDynamicProxyScanFullSample](#51-scrutorcastledynamicproxyscanfullsample)
+    - [5.2. AutofacCastleDynamicProxyFullSample](#52-autofaccastledynamicproxyfullsample)
+    - [5.3. FodyFullSample](#53-fodyfullsample)
+- [6. Refers](#6-refers)
 
 <!-- /TOC -->
 
@@ -137,7 +141,22 @@ todo
 
 [说明](AutofacCastleDynamicProxySample/README.md)
 
-## 5. Refers
+## 5. 完整项目示例
+
+### 5.1. ScrutorCastleDynamicProxyScanFullSample
+
+CastleDynamicProxy + Scrutor
+
+### 5.2. AutofacCastleDynamicProxyFullSample
+
+.
+
+### 5.3. FodyFullSample
+
+.
+
+
+## 6. Refers
 
 https://www.cnblogs.com/wswind/p/aop_in_dotnet.html
 
