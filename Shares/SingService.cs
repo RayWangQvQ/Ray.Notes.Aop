@@ -8,9 +8,13 @@ namespace Shares
 {
     public class SingService : ISingService
     {
-        public void Sing()
+        public async Task Sing()
         {
+            await Task.Delay(100);
             PrintHelper.Print("LaLaLa");
+
+            await Task.Delay(100);
+            PrintHelper.Print("LvLvLv");
         }
     }
 }

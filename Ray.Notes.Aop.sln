@@ -18,11 +18,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CastleDynamicProxySample", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MsDiCastleDynamicProxySample", "MsDiCastleDynamicProxySample\MsDiCastleDynamicProxySample.csproj", "{CC1EF56A-CD06-45B9-B4B2-022AFDB70B16}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScrutorDecoratorSample", "ScrutorDecoratorSample\ScrutorDecoratorSample.csproj", "{5732C25F-D483-4BA0-AC96-AECB9FB400F7}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScrutorCastleDynamicProxyScanSample", "ScrutorCastleDynamicProxyScanSample\ScrutorCastleDynamicProxyScanSample.csproj", "{697AC7BF-D43A-4875-8129-554CDEB80FFB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutofacCastleDynamicProxySample", "AutofacCastleDynamicProxySample\AutofacCastleDynamicProxySample.csproj", "{F8D63DF2-F7F9-447A-920E-685036A995DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScrutorDecoratorSample", "ScrutorDecoratorSample\ScrutorDecoratorSample.csproj", "{5732C25F-D483-4BA0-AC96-AECB9FB400F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FodySample", "FodySample\FodySample.csproj", "{1CC42F17-8099-4731-A80E-2C9A673A95B7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,10 +52,6 @@ Global
 		{CC1EF56A-CD06-45B9-B4B2-022AFDB70B16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC1EF56A-CD06-45B9-B4B2-022AFDB70B16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC1EF56A-CD06-45B9-B4B2-022AFDB70B16}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5732C25F-D483-4BA0-AC96-AECB9FB400F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5732C25F-D483-4BA0-AC96-AECB9FB400F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5732C25F-D483-4BA0-AC96-AECB9FB400F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5732C25F-D483-4BA0-AC96-AECB9FB400F7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{697AC7BF-D43A-4875-8129-554CDEB80FFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{697AC7BF-D43A-4875-8129-554CDEB80FFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{697AC7BF-D43A-4875-8129-554CDEB80FFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -62,9 +60,20 @@ Global
 		{F8D63DF2-F7F9-447A-920E-685036A995DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8D63DF2-F7F9-447A-920E-685036A995DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8D63DF2-F7F9-447A-920E-685036A995DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5732C25F-D483-4BA0-AC96-AECB9FB400F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5732C25F-D483-4BA0-AC96-AECB9FB400F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5732C25F-D483-4BA0-AC96-AECB9FB400F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5732C25F-D483-4BA0-AC96-AECB9FB400F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CC42F17-8099-4731-A80E-2C9A673A95B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CC42F17-8099-4731-A80E-2C9A673A95B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CC42F17-8099-4731-A80E-2C9A673A95B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CC42F17-8099-4731-A80E-2C9A673A95B7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1CC42F17-8099-4731-A80E-2C9A673A95B7} = {540A0DB6-4D0C-4068-9DC7-CB85C7DD9744}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {464147C2-6D99-4A2A-8FFA-DE820B3FE21A}

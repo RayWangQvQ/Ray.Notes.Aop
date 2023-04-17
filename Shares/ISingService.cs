@@ -8,6 +8,6 @@ namespace Shares
 {
     public interface ISingService: IAppService
     {
-        void Sing();
+        Task Sing();
     }
 }
