@@ -1,0 +1,26 @@
+﻿using FluentValidation;
+
+namespace AutofacCastleDynamicProxyFullSample.AppServices.Account
+{
+    public class UserAccountDto
+    {
+        public string Name { get; set; }
+
+        public string Pwd { get; set; }
+    }
+
+    public class CustomerValidator : AbstractValidator<UserAccountDto>
+    {
+        public CustomerValidator()
+        {
+            RuleFor(it => it.Name).NotEmpty();
+            RuleFor(it => it.Pwd).NotEmpty();
+
+            RuleFor(it => it.Name).Must(s =>
+            {
+                //可以断点调式
+                return true;
+            });
+        }
+    }
+}

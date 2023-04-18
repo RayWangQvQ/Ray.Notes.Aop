@@ -46,7 +46,7 @@ Aspect Oriented Programming的缩写，意为：面向切面编程。
 
 ### 2.2. 切面（Aspect）
 
-抽象出的逻辑
+抽象出的逻辑，有些框架也叫它Interceptor
 
 ### 2.3. 织入（Weaving）
 

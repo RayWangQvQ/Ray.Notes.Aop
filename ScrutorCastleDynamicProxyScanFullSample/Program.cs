@@ -46,6 +46,7 @@ public static class MyExtensions
 {
     public static IServiceCollection AddAppServices(this IServiceCollection services)
     {
+        //AppService
         services.Scan(scan =>
             scan.FromAssemblyOf<Program>()
                 .AddClasses(classes => classes.AssignableTo<IAppService>())

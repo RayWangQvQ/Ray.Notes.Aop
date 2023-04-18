@@ -1,8 +1,7 @@
+using AutofacCastleDynamicProxyFullSample.AppServices.Book;
 using Microsoft.AspNetCore.Mvc;
-using ScrutorCastleDynamicProxyScanFullSample.AppServices.Account;
-using ScrutorCastleDynamicProxyScanFullSample.AppServices.Book;
 
-namespace ScrutorCastleDynamicProxyScanFullSample.Controllers
+namespace AutofacCastleDynamicProxyFullSample.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -27,8 +26,7 @@ namespace ScrutorCastleDynamicProxyScanFullSample.Controllers
         [HttpPut]
         public async Task<bool> Update(BookDto dto)
         {
-            await Task.Delay(1);
-            _service.Update(dto);
+            await _service.Update(dto);
             return true;
         }
     }

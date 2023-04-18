@@ -4,6 +4,6 @@
     {
         Task Create(BookDto dto);
 
-        Task Update(BookDto dto);
+        void Update(BookDto dto);
     }
 }

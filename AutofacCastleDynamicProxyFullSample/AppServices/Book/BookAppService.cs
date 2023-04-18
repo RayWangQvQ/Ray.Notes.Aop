@@ -1,4 +1,4 @@
-﻿namespace ScrutorCastleDynamicProxyScanFullSample.AppServices.Book
+﻿namespace AutofacCastleDynamicProxyFullSample.AppServices.Book
 {
     public class BookAppService : IBookAppService
     {
@@ -15,8 +15,9 @@
             _logger.LogInformation("这是创建书籍方法");
         }
 
-        public void Update(BookDto dto)
+        public async Task Update(BookDto dto)
         {
+            await Task.Delay(100);
             _logger.LogInformation("这是更新用户方法");
         }
     }
