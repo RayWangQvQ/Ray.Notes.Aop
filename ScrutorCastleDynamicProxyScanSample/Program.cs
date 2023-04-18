@@ -21,6 +21,7 @@ namespace ScrutorCastleDynamicProxySample
                 .AddClasses(classes => classes.AssignableTo<IAppService>())
                 .AsImplementedInterfaces()
                 //.AsSelf()
+                .AsImplementedInterfaces()
                 .WithTransientLifetime());
 
             builder.Services.AddSingleton<ProxyGenerator>();
