@@ -8,11 +8,11 @@
     - [2.2. 切面（Aspect）](#22-切面aspect)
     - [2.3. 织入（Weaving）](#23-织入weaving)
 - [3. 实现AOP的几种原理](#3-实现aop的几种原理)
-    - [3.1. 静态代理](#31-静态代理)
+    - [3.1. 静态织入](#31-静态织入)
     - [3.2. 动态代理](#32-动态代理)
     - [3.3. 区分](#33-区分)
 - [4. 实现](#4-实现)
-    - [4.1. DIY静态代理](#41-diy静态代理)
+    - [4.1. DIY代理模式](#41-diy代理模式)
     - [4.2. DIY动态代理](#42-diy动态代理)
     - [4.3. 静态代理-Scrutor Decorate](#43-静态代理-scrutor-decorate)
     - [4.4. 静态代理-Fody](#44-静态代理-fody)
@@ -57,9 +57,9 @@ AOP即是把切面在指定的连接点织入到目标对象中。
 
 ## 3. 实现AOP的几种原理
 
-总体分2种：静态代理（编译时）和动态代理（运行时）。
+总体分2种：静态织入（编译时）和动态代理（运行时）。
 
-### 3.1. 静态代理
+### 3.1. 静态织入
 
 静态代理是指在编译时就已经确定了代理类和目标类的关系
 
@@ -89,7 +89,7 @@ AOP即是把切面在指定的连接点织入到目标对象中。
 
 ## 4. 实现
 
-### 4.1. DIY静态代理
+### 4.1. DIY代理模式
 
 手写一个代理模式
 
@@ -114,8 +114,7 @@ Scrutor集成的装饰者模式。
 
 https://github.com/inversionhourglass/Rougamo
 
-todo
-
+[说明](FodySample/README.md)
 
 ### 4.5. 动态代理-Castle.DynamicProxy
 
@@ -164,29 +163,7 @@ todo
 
 ## 6. Refers
 
-https://www.cnblogs.com/wswind/p/aop_in_dotnet.html
-
-https://github.com/dotnet/runtime/issues/36021
-
-https://zhuanlan.zhihu.com/p/557599565
-
-https://www.cnblogs.com/chenug/p/9848852.html
-
-根据网络搜索结果，.net实现AOP有以下几种方案：
-
-- 使用Remoting Proxies，但是只能用于interface或MarshalByRefObjects¹
-- 使用ContextBoundObject，但是性能非常低¹
-- 使用编译时生成子类，如Rhino Proxy，但是只能用于Interfaces 或 virtual方法¹
-- 使用运行时生成子类，如Castle Dynamic Proxy，但是实现复杂¹
-- 使用挂钩分析用的API，如Type Mock，但是性能存在疑问¹
-- 使用编译时IL修改，如Post Sharp / Cecil，但是非常难以实现¹²
-- 使用运行时修改IL，如Post Sharp / Cecil，但是非常难以实现¹²
-
-其中，Post Sharp是收费的商业项目²³，Castle Dynamic Proxy是开源免费的²。你可以根据你的需求和偏好选择合适的方案。
-
-源: 与必应的对话， 4/12/2023
-(1) 在.NET中实现AOP的7种姿势 - 腾讯云开发者社区-腾讯云. https://cloud.tencent.com/developer/article/1395543 访问时间 4/12/2023.
-(2) AOP in .NET - wswind - 博客园. https://www.cnblogs.com/wswind/p/aop_in_dotnet.html 访问时间 4/12/2023.
-(3) .NET中使用unity实现aop_DO_大龄码农的博客-CSDN博客. https://blog.csdn.net/xuwei_xuwei/article/details/33725059 访问时间 4/12/2023.
-(4) .net5 AOP思想_小盆友你是否很有多问号的博客-CSDN博客. https://blog.csdn.net/qq_43369949/article/details/118353547 访问时间 4/12/2023.
-(5) 利用C#实现AOP常见的几种方法详解 - PanPan003 - 博客园. https://www.cnblogs.com/panpanwelcome/p/8617552.html 访问时间 4/12/2023.
+- [AOP in .NET - wswind - 博客园](https://www.cnblogs.com/wswind/p/aop_in_dotnet.html)
+- https://github.com/dotnet/runtime/issues/36021
+- https://zhuanlan.zhihu.com/p/557599565
+- https://www.cnblogs.com/chenug/p/9848852.html
