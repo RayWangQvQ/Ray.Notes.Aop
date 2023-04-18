@@ -18,7 +18,8 @@ namespace ScrutorCastleDynamicProxyScanFullSample.AppServices.Account
 
             RuleFor(it => it.Name).Must(s =>
             {
-                return false;
+                //可以断点调式
+                return true;
             });
         }
     }
