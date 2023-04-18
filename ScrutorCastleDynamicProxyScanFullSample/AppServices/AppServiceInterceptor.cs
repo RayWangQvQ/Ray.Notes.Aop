@@ -1,5 +1,6 @@
 ﻿using Castle.DynamicProxy;
 using FluentValidation;
+using System.Reflection;
 
 namespace ScrutorCastleDynamicProxyScanFullSample.AppServices
 {
@@ -90,6 +91,11 @@ namespace ScrutorCastleDynamicProxyScanFullSample.AppServices
         /// <exception cref="ValidationException"></exception>
         private async Task AutoValidation(IInvocation invocation)
         {
+            //方法上主动打了DisableAutoValidationAttribute的不进行aop验证
+            if (invocation.Method.GetCustomAttributes<DisableAutoValidationAttribute>().Any()
+                || invocation.MethodInvocationTarget.GetCustomAttributes<DisableAutoValidationAttribute>().Any()
+                ) return;
+
             var dto = invocation.Arguments.FirstOrDefault();//todo 多个参数情况
             var type = typeof(IValidator<>).MakeGenericType(dto.GetType());
             var validator= (IValidator)_serviceProvider.GetRequiredService(type);

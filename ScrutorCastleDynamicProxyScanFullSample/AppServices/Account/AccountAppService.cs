@@ -16,6 +16,7 @@
             return true;
         }
 
+        [DisableAutoValidation]
         public async Task<bool> Update(UserAccountDto dto)
         {
             await Task.Delay(100);

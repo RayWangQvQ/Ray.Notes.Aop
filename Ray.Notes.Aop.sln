@@ -28,6 +28,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FodySample", "FodySample\Fo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScrutorCastleDynamicProxyScanFullSample", "ScrutorCastleDynamicProxyScanFullSample\ScrutorCastleDynamicProxyScanFullSample.csproj", "{70B562BC-0EFB-462A-B8C7-F9DB67C30B62}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutofacCastleDynamicProxyFullSample", "AutofacCastleDynamicProxyFullSample\AutofacCastleDynamicProxyFullSample.csproj", "{31E16728-6F4E-4692-92CD-42BBBA75A777}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -74,6 +76,10 @@ Global
 		{70B562BC-0EFB-462A-B8C7-F9DB67C30B62}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70B562BC-0EFB-462A-B8C7-F9DB67C30B62}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70B562BC-0EFB-462A-B8C7-F9DB67C30B62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31E16728-6F4E-4692-92CD-42BBBA75A777}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31E16728-6F4E-4692-92CD-42BBBA75A777}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31E16728-6F4E-4692-92CD-42BBBA75A777}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31E16728-6F4E-4692-92CD-42BBBA75A777}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
