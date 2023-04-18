@@ -21,6 +21,7 @@
         - [4.5.2. Ms DI + Castle.DynamicProxy](#452-ms-di--castledynamicproxy)
         - [4.5.3. Ms DI + Scrutor + Castle.DynamicProxy](#453-ms-di--scrutor--castledynamicproxy)
         - [4.5.4. Autofac + Castle.DynamicProxy](#454-autofac--castledynamicproxy)
+    - [4.6. 动态代理-AspectCore-Framework](#46-动态代理-aspectcore-framework)
 - [5. 完整项目示例](#5-完整项目示例)
     - [5.1. ScrutorCastleDynamicProxyScanFullSample](#51-scrutorcastledynamicproxyscanfullsample)
     - [5.2. AutofacCastleDynamicProxyFullSample](#52-autofaccastledynamicproxyfullsample)
@@ -65,7 +66,7 @@ AOP即是把切面在指定的连接点织入到目标对象中。
 流行类库：
 
 - [PostSharp](https://www.postsharp.net/)（收费）
-- Fody
+- [Fody](https://github.com/Fody/Fody)
 - [Scrutor](https://github.com/khellang/Scrutor#decoration)
 
 ### 3.2. 动态代理
@@ -74,6 +75,7 @@ AOP即是把切面在指定的连接点织入到目标对象中。
 
 流行类库：
 - [Castle.DynamicProxy](https://github.com/castleproject/Core)
+- [AspectCore-Framework](https://github.com/dotnetcore/AspectCore-Framework)
 
 ### 3.3. 区分
 
@@ -141,19 +143,23 @@ todo
 
 [说明](AutofacCastleDynamicProxySample/README.md)
 
+### 4.6. 动态代理-AspectCore-Framework
+
+todo
+
 ## 5. 完整项目示例
 
 ### 5.1. ScrutorCastleDynamicProxyScanFullSample
 
-CastleDynamicProxy + Scrutor
+CastleDynamicProxy + Castle.Core.AsyncInterceptor + Scrutor
 
 ### 5.2. AutofacCastleDynamicProxyFullSample
 
-.
+Autofac.Extras.DynamicProxy + Castle.Core.AsyncInterceptor
 
 ### 5.3. FodyFullSample
 
-.
+todo
 
 
 ## 6. Refers
